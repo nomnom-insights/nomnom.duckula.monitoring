@@ -14,5 +14,6 @@
                  [nomnom/duckula "0.5.0"]
                  [nomnom/stature "2.0.0"]
                  [nomnom/caliban "1.0.2"]]
-    :profiles {:dev
+  :plugins [[lein-cloverage "1.0.13" :exclusions [org.clojure/clojure]]]
+  :profiles {:dev
              {:dependencies  [[ch.qos.logback/logback-classic "1.2.3"]]}})
