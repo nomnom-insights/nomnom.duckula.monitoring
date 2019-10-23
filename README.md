@@ -1,5 +1,7 @@
 # duckula.monitoring
 
+[![CircleCI](https://circleci.com/gh/nomnom-insights/nomnom.duckula.monitoring.svg?style=svg)](https://circleci.com/gh/nomnom-insights/nomnom.duckula.monitoring)
+
 [![Clojars Project](https://img.shields.io/clojars/v/nomnom/duckula.monitoring.svg)](https://clojars.org/nomnom/duckula.monitoring)
 
 A fully functioning monitoring component for [Duckula](https://github.com/nomnom-insights/nomnom.duckula).
