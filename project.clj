@@ -5,7 +5,9 @@
             :url "https://opensource.org/licenses/MIT"
             :year 2018
             :key "mit"}
-  :deploy-repositories {"clojars" {:sign-releases false}}
+  :deploy-repositories {"clojars" {:sign-releases false
+                                   :username [:gpg :env/clojars_username]
+                                   :password [:gpg :env/clojars_password]}}
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [com.stuartsierra/component "0.4.0"]
                  [org.clojure/tools.logging "0.5.0"]
