@@ -1,4 +1,4 @@
-(defproject nomnom/duckula.monitoring "0.5.0"
+(defproject nomnom/duckula.monitoring "0.6.0-SNAPSHOT"
   :description "Monitoring Component for Duckula"
   :url "https://github.com/nomnom-insights/nomnom.duckula.monitoring"
   :license {:name "MIT License"

@@ -52,6 +52,13 @@ Only useful if you're using Duckula :wink:
 
 ```
 
+## Changelog
+
+
+- [2020-03-25] - Add `exclude-pattern` options
+
+- [2019-10-21] - Initial Public Offering
+
 ## Roadmap
 
 None at the moment
