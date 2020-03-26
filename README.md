@@ -11,6 +11,15 @@ A fully functioning monitoring component for [Duckula](https://github.com/nomnom
 
 Only useful if you're using Duckula :wink:
 
+
+## Options
+
+
+- `name`: (optional) name of the monitoring stack, usually will be the name of your service, used only for lifecylce logs
+- `exclude-pattern`:  (optional) a Regex  to filter out metrics that you don't want to report on, e.g health-check routes, it will also switch logs to DEBUG only level. Note that exceptions thrown will always be tracked and reported!
+
+
+
 ## Usage
 
 ```clojure
@@ -23,7 +32,7 @@ Only useful if you're using Duckula :wink:
    :statsd (stature.metrics/create {:host "localhost" :port 8125 :prefix "duckula-test"})
    ;; put it all together
    :monitoring (component/using
-                (duckula.monitoring/create {:name "my-api"})
+                (duckula.monitoring/create {:name "my-api" :exclude-pattern #".+health-check.+"})
                 [:statsd :exception-tracker])
    ;; sets up the web request handler
   ;; ring-compatible web server component must be provided by you
@@ -42,6 +51,13 @@ Only useful if you're using Duckula :wink:
 
 
 ```
+
+## Changelog
+
+
+- [2020-03-25] - Add `exclude-pattern` options
+
+- [2019-10-21] - Initial Public Offering
 
 ## Roadmap
 
