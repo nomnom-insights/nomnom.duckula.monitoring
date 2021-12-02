@@ -30,7 +30,7 @@
   duckula.protocol/Monitoring
 
   (record-timing
-    [this key time-ms]
+    [_this key time-ms]
     (if (should-report? exclude-pattern key)
       (do
         (log/infof "request=%s time=%s" key time-ms)
@@ -39,7 +39,7 @@
 
 
   (on-success
-    [this key response]
+    [_this key response]
     (if (should-report? exclude-pattern key)
       (do
         (log/infof "request=%s status=success:%s" key (:status response))
@@ -48,7 +48,7 @@
 
 
   (on-error
-    [this key]
+    [_this key]
     (if (should-report? exclude-pattern key)
       (do
         (log/warnf "request=%s status=error" key)
@@ -56,7 +56,7 @@
       (log/debugf "request=%s status=error" key)))
 
   (on-failure
-    [this key]
+    [_this key]
     (if (should-report? exclude-pattern key)
       (do
         (log/errorf "request=%s status=failure" key)
@@ -64,7 +64,7 @@
       (log/debugf "request=%s status=failure" key)))
 
   (on-not-found
-    [this key uri]
+    [_this key uri]
     (if (should-report? exclude-pattern key)
       (do
         (log/warnf "request=%s status=not-found uri=%s" key uri)
@@ -72,12 +72,12 @@
       (log/warnf "request=%s status=not-found uri=%s" key uri)))
 
   (track-exception
-    [this exception]
+    [_this exception]
     (log/error exception)
     (tracker/report exception-tracker exception))
 
   (track-exception
-    [this exception data]
+    [_this exception data]
     (log/errorf exception "data=%s" data)
     (tracker/report exception-tracker exception data)))
 
