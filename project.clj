@@ -1,4 +1,4 @@
-(defproject nomnom/duckula.monitoring "0.6.1-SNAPSHOT-1"
+(defproject nomnom/duckula.monitoring "0.6.1"
   :description "Monitoring Component for Duckula"
   :url "https://github.com/nomnom-insights/nomnom.duckula.monitoring"
   :license {:name "MIT License"
@@ -12,9 +12,9 @@
   :dependencies [[org.clojure/clojure "1.10.3"]
                  [com.stuartsierra/component "1.0.0"]
                  [org.clojure/tools.logging "1.1.0"]
-                 [nomnom/duckula "0.5.0"]
-                 [nomnom/stature "2.0.0"]
-                 [nomnom/caliban "1.0.2"]]
+                 [nomnom/duckula "0.7.3"]
+                 [nomnom/stature "2.0.1"]
+                 [nomnom/caliban "1.0.3"]]
 
   :profiles {:dev
              {:dependencies  [[ch.qos.logback/logback-classic "1.2.7"]]}})
