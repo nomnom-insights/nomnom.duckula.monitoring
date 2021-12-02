@@ -8,7 +8,6 @@
 
   :deploy-repositories [["releases"  {:sign-releases false :url "https://clojars.org"}]
                         ["snapshots" {:sign-releases false :url "https://clojars.org"}]]
-
   :dependencies [[org.clojure/clojure "1.10.3"]
                  [com.stuartsierra/component "1.0.0"]
                  [org.clojure/tools.logging "1.1.0"]

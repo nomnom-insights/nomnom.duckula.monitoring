@@ -55,9 +55,9 @@ Only useful if you're using Duckula :wink:
 ## Changelog
 
 
-- [2020-03-25] - Add `exclude-pattern` options
-
-- [2019-10-21] - Initial Public Offering
+- 2021-12-02 - Updated dependencies
+- 2020-03-25 - Add `exclude-pattern` options
+- 2019-10-21 - Initial Public Offering
 
 ## Roadmap
 
