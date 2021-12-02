@@ -1,7 +1,7 @@
 (ns duckula.monitoring-test
   (:require
     [caliban.tracker.mock :as tracker.mock]
-    [clojure.test :refer :all]
+    [clojure.test :refer [deftest is use-fixtures]]
     [com.stuartsierra.component :as component]
     [duckula.monitoring :as monitoring]
     [duckula.protocol :as protocol]
@@ -24,16 +24,15 @@
     (reset! counter-state {})
     this)
 
-
   metrics/Metrics
 
   (count
-    [this key]
+    [_this key]
     (swap! counter-state (fn [c] (update c key #(inc (get % key 0))))))
 
 
   (timing
-    [this key val]
+    [_this key val]
     (swap! counter-state #(assoc % (str key ".ms") val))))
 
 
