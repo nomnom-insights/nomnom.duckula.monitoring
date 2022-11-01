@@ -1,3 +1,5 @@
+# :warning: This library is no longer maintained 
+
 # duckula.monitoring
 
 [![CircleCI](https://circleci.com/gh/nomnom-insights/nomnom.duckula.monitoring.svg?style=svg)](https://circleci.com/gh/nomnom-insights/nomnom.duckula.monitoring)
